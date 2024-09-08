@@ -14,7 +14,7 @@ const RotatingCube = () => {
   })
   return (
     <mesh ref={meshRef}>
-      <cylinderGeometry args={[1, 1, 1]}/>
+      <boxGeometry args={[1, 1, 1]}/>
       <meshLambertMaterial color='#468585' emissive='#468585'/>
     </mesh>
   )
@@ -22,7 +22,7 @@ const RotatingCube = () => {
 
 
 
-const ThreeScene = () => {
+const Cube = () => {
   return (
    <Canvas style={{height: '100vh', width:'100vw', display:'flex', justifyContent:'center', alignItems:'center'}}>
     <OrbitControls enableZoom enablePan enableRotate/>
@@ -33,4 +33,4 @@ const ThreeScene = () => {
   );
 };
 
-export default ThreeScene;
+export default Cube;
