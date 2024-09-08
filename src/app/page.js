@@ -4,7 +4,7 @@ import ThreeScene from './components/ThreeScene';
 const HomePage = () => {
   return (
     <div>
-      <ThreeScene></ThreeScene>
+      <ThreeScene/>
     </div>
   );
 };
