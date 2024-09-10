@@ -13,30 +13,30 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import Link from 'next/link';
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const navItems = [
-    {
-        route: "Home",
-        pathname: "/",
-    },
-    {
-        route: "About",
-        pathname: "/about",
-    },
-    {
-        route: "Education",
-        pathname: "/education",
-    },
-    {
-        route: "Experience",
-        pathname: "/experience",
-    },
-    {
-        route: "Contact ME",
-        pathname: "/",
-    },
-    
+  {
+    route: "Home",
+    pathname: "/",
+  },
+  {
+    route: "About",
+    pathname: "/about",
+  },
+  {
+    route: "Education",
+    pathname: "/education",
+  },
+  {
+    route: "Experience",
+    pathname: "/experience",
+  },
+  {
+    route: "Contact ME",
+    pathname: "/",
+  },
+
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -64,7 +64,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-          className='text-white'
+            className='text-white'
             variant="h6"
             noWrap
             component="a"
@@ -79,10 +79,10 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-           ORRERY APP
+            ORRERY APP
           </Typography>
 
-          <Box  sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -114,14 +114,14 @@ function Navbar() {
               {navItems.map((item) => (
                 <MenuItem key={item} onClick={handleCloseNavMenu}>
                   <Link key={item} href={item.pathname}>
-                <Button className='text-white'>{item.route}</Button>
-              </Link>
+                    <Button className='text-white'>{item.route}</Button>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Typography
-          className='text-white'
+            className='text-white'
             variant="h5"
             noWrap
             component="a"
@@ -137,23 +137,23 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-          ORRERY APP
+            ORRERY APP
           </Typography>
-          <Box className='w-[100px] ml-96'  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className='w-[100px] ml-96' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
               <Link activeClass="active"
-              to={item.pathname}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              key={item} href={item.pathname}>
-                <Button  className='text-white '>{item.route}</Button>
+                to={item.pathname}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                key={item} href={item.pathname}>
+                <Button className='text-white '>{item.route}</Button>
               </Link>
             ))}
           </Box>
 
-        
+
         </Toolbar>
       </Container>
     </AppBar>
